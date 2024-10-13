@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="background"></div>
+  <div class="outer-container">
+    <div class="left-container">
+      
+      <div class="list-container">
+        
+        <ul>
+          <li>
+            <img class="the-image" src="meSmall.jpg"> 
+          </li>
+          <li><a href="index.html">About me</a></li>
+          <li><a href="apps.html">Apps and games</a></li>
+          <li><a href="github.html">Github</a></li>
+          <li><a class="selected" href="proof.html">Proof of solve-ability</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
+        </ul
+          
+      </div>
+    </div>
+    <div class="right-container">
+      <div Class="text-container">
+        <h1 class="title-text">Proof of solve-ability</h1>
+        <p class="content-text">All equations are solvable as long as they can return a real number.</p>
+        <p></p>
+        <p class="content-text">To solve an equation that cannot be solved with other methods. You first need to put all of the unknown terms on one side of the equation. Then make the side that has the unknowns into a function. Then for each of the instances you want to solve for define the minimum and maximum values that the instance must be between and then if the function is increasing or decreasing.</p>
+        <p></p>
+        <p class="content-text">Here is an example in C like code of how to do this.</p>
+        <p></p>
+        <p class="content-text">Take 2 ^ X + 3X = 16 then write:</p>
+        <p></p>
+        <p class="content-text">double func(double inv){<br/>
+          return pow(2, inv) + 3 <span class="special-font">*</span> inv;<br/>
+        }<br/></p>
+        <p></p>
+        <p class="content-text">double hig = 3;<br>
+          double low = 2;<br>
+          double X = low;<br>
+          for (float hval = (hig <span class="min-format">-</span> low) / 2;hval <span class="special-font1">></span> pow(2, <span class="min-format">-</span>48);hval /= 2) if (func(X + hval) <span class="special-font1"><</span>= 16) X += hval;</p>
+        <p></p>
+        <p class="content-text">What this means is that hval is set to half of the maximum minus the minimum. Then the function is tested for X + hval to see the result is smaller or equal to 16. If it is smaller or equal to 16 then hval is added to X. Then hval is divided by 2 and the process is repeated until hval is smaller than a defined size. </p>
+        <p></p>
+        <p class="content-text">The float data type is smaller in precision than the double type. This doesn't matter because of how floating point numbers work.</p>
+        <p></p>
+        <p class="content-text">func(X + hval) <span class="special-font1"><</span>= 16 this is because the function is increasing if it were decreasing it would be func(X + hval) <span class="special-font1">></span>= 16.</p>
+        <p></p>
+        <p class="content-text">To find 2 values at once you would assume that Y is a variable that is only increasing or decreasing and as you would solve for X which one would be increasing and the other decreasing. You solve for both X values and update Y.</p>
+        <p></p>
+        <p class="content-text">To find a maximum or minimum of a function is quite similar to the previous method. the code is:</p>
+        <p></p>
+        <p class="content-text">double rep;<br>
+          double X = low + (hig <span class="min-format">-</span> low) /  2;<br>
+          for (float hval = (hig <span class="min-format">-</span> low) /  4;hval <span class="special-font1">></span> pow(2, <span class="min-format">-</span>48);hval /= 2){<br>
+            &nbsp;&nbsp;double min = <span class="min-format">-</span>1000000;<br>
+            &nbsp;&nbsp;double fnd = 0;<br>
+            &nbsp;&nbsp;for (int dest = 0;dest <span class="special-font1"><</span> 3;dest++){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;rep = func(X + hval <span class="special-font">*</span> ((float)dest <span class="min-format">-</span> 1));<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;if (rep <span class="special-font1">></span> min){<br>
+                
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min = rep;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fnd = X + hval <span class="special-font">*</span> ((float)dest – 1));<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;}<br>
+                  &nbsp;&nbsp;X = fnd;<br>
+          }</p>
+          <p></p>
+          <p class="content-text">This is if you were to find the maximum. For the minimum you would make min a large number and change this: if (rep <span class="special-font1">></span> min) min = rep; to (rep <span class="special-font1"><</span> min) min = rep;</p>
+          <p></p>
+          <p class="content-text">This goes through the same kind of loop and takes 3 samples. Whichever is the closest to the result becomes the new value of X.</p>
+        </div>
+    </div>   
+  </div>
+</body>
+</html>

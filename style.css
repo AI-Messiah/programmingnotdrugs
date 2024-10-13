@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts/PublicPixel-rv0pA.woff2') format('woff2'),
+       url('fonts/PublicPixel-rv0pA.woff') format('woff'),
+       url('fonts/PublicPixel-rv0pA.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+.outer-container {
+  display: flex;
+  
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-container {
+  flex: 1;
+  /* Add other styling if needed */
+}
+
+.right-container {
+  margin-left: 28vw;
+  margin-right: 3vw;
+  flex: 3;
+  
+  display: flex;
+  color: rgb(29, 60, 69);
+  text-align: justify;
+  line-height: 200%;
+}
+.the-image{
+  width: 100%;  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: rgb(184, 191, 181);
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto;
+  
+}
+li a {
+  display: block;
+  color: #80ffff;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.selected{
+  color: #407f7f;
+}
+
+p{
+  font-size: 24px;
+}
+
+.app-description{
+  
+  color: black;
+  font-size: 22px;
+  
+  position: relative; 
+}
+
+.word-seperator{
+  background-color: white;
+  display: inline-block;
+}
+
+.app-description:hover .hover-text{
+  visibility: visible;
+}
+
+.hover-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: justify;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  display: block;
+}
+
+.special-font {
+  font-family: Arial;
+  font-size: 38px;
+  font-weight: 900;
+  vertical-align: -11px;
+}
+
+.special-font1{
+  font-family: Arial;
+  font-size: 38px;
+  font-weight: 900;
+  vertical-align: -5px;
+}
+
+.min-format{
+  vertical-align: 5px;
+}
+
+h1{
+  text-align: center;
+}
+
+.title-text{
+  text-align: center;
+
+}
+
+.mydown{
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+
+.app-shots{
+  
+  width: 15%;
+  height: auto;
+}
+
+body{
+  background-image: url('pndlight.png'); /* Replace with your image */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-attachment: fixed; /* Keeps the image fixed to the viewport */
+  background-size: 100% 100%;
+  background-position: top;
+  background-color: rgb(138, 151, 133);  
+}
