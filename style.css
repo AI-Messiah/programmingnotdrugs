@@ -141,3 +141,12 @@ body{
   background-position: top;
   background-color: rgb(138, 151, 133);  
 }
+
+input{
+  background-color:#80ffff;
+  color:  red;
+  margin-bottom: 3vh;
+  font-size: 24px;
+  font-family: 'MyCustomFont', sans-serif;
+  width: 12vw;
+}
