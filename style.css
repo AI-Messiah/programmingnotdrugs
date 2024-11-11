@@ -55,6 +55,7 @@ li a {
   color: #80ffff;
   padding: 8px 16px;
   text-decoration: none;
+  font-size: 2.25vh;
 }
 
 .selected{
@@ -143,6 +144,7 @@ body{
 }
 
 input{
+  text-align: right;
   background-color:#80ffff;
   color:  red;
   margin-bottom: 3vh;
