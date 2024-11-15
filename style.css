@@ -144,7 +144,7 @@ body{
 }
 
 input{
-  text-align: right;
+  text-align: center;
   background-color:#80ffff;
   color:  red;
   margin-bottom: 3vh;
